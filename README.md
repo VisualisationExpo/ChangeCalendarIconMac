@@ -1,19 +1,4 @@
-# ChangeCalendarIconMac
-
-# UPDATE 28th of October 2021
-## The Calendar icon inside Launchpad and how to change that too.
-
-- The exact same process as mentioned earlier
-- This time instead you'll want to change the Calendar icon inside ```/System/Applications/Calendar/Contents/Resources/Assets.car```
-- You will need ThemeEngine to change the icons in here as it can edit and save out the ```.car``` file you need.
-- Best practice for changing system files is to **always make backups!**
--  
-# UPDATE 20th of March 2024
-## The Calendar icon on ARM
-- When you're using an Apple Silicon Mac you'll need to change the bless command a little
-- ```sudo bless --mount "$HOME/livemount/System/Library/CoreServices/" --setBoot --create-snapshot```
-
-
+# Look for updates at the end of the document
 ## Hello all
 
 
@@ -94,8 +79,7 @@ sudo shutdown -r now
 ```
 
 
-
-# I WILL NOW USE MY OWN WORDS TO HELP YOU SHOULD YOU DESIRE TO REMAIN ON REDDIT
+# I WILL NOW USE MY OWN WORDS TO HELP YOU
 
 1. Create a directory in your Home directory with a name that will make sense for your theming efforts.
 In this example I call the directory 'livemount'
@@ -110,7 +94,7 @@ In this example I call the directory 'livemount'
 7. Now you ought to see your system disk mounted in this folder
 8. Navigate to ```/System/Library/PrivateFrameworks/CalendarUIKit.framework/Versions/A/Resources/```in that system disk within that folder you made called livemount
 9. Change the App-Empty.icns file
-10. Type ```sudo bless --mount /Users/yourusernamehere/livemount/ --bootefi --create-snapshot ```
+10. Type ```sudo bless --mount /Users/yourusernamehere/livemount/ --bootefi --create-snapshot```
 11. Wait a second or 2 for the blessing of your system disk to complete
 12. Type ```sudo shutdown -r now```
 13. Your Mac reboots
@@ -118,6 +102,20 @@ In this example I call the directory 'livemount'
 
 ## **IF YOU FOLLOW ALL INSTRUCTIONS YOU WILL HAVE CHANGED THE ICON.**
 
+
+# UPDATE 28th of October 2021
+## The Calendar icon inside Launchpad and how to change that too.
+
+- The exact same process as mentioned earlier
+- This time instead you'll want to change the Calendar icon inside ```/System/Applications/Calendar/Contents/Resources/Assets.car```
+- You will need ThemeEngine to change the icons in here as it can edit and save out the ```.car``` file you need.
+- Best practice for changing system files is to **always make backups!**
+
+  
+# UPDATE 20th of March 2024
+## The Calendar icon on ARM
+- When you're using an Apple Silicon Mac you'll need to change the bless command a little. If all you're doing is changing the Calendar icon on the Dock you can settle for only blessing the framework.
+- ```sudo bless --mount "$HOME/livemount/System/Library/PrivateFrameworks/CalendarUIKit.framework/" --setBoot --create-snapshot```
 
 
 ##### **CREDITS**
