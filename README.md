@@ -34,7 +34,7 @@ shutdown -r now
 
 # APPLE SILICON SOLUTION
 
-### Shutdown your Apple Silicon-based Mac
+### Shutdown your Apple silicon-based Mac
 
 **Next hold down the power button for a few seconds. On a Mac mini you'll see the front power light dim a little. You should now let go of the power button**
 
@@ -97,7 +97,8 @@ In this example I call the directory 'livemount'
 10. Type ```sudo bless --mount /Users/yourusernamehere/livemount/ --bootefi --create-snapshot```
 11. Wait a second or 2 for the blessing of your system disk to complete
 12. Type ```sudo shutdown -r now```
-13. Your Mac reboots
+13. Alternatively you can use the Finder - Restart... menu item.
+14. Your Mac reboots
  
 
 ## **IF YOU FOLLOW ALL INSTRUCTIONS YOU WILL HAVE CHANGED THE ICON.**
